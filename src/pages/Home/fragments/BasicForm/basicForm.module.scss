@@ -1,0 +1,26 @@
+.root {
+  header {
+    margin-bottom: 1.5rem;
+
+    p {
+      color: var(--color-green-light);
+      margin-top: 0.3em;
+    }
+  }
+
+  form {
+    > *:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+
+    > p {
+      color: var(--color-red);
+      text-align: center;
+    }
+  }
+}
+
+.customField input,
+form .customButton {
+  width: 100%;
+}

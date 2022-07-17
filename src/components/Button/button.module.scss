@@ -1,0 +1,28 @@
+@use '@/styles';
+
+.root {
+  @extend .p;
+
+  height: var(--input-height);
+  width: var(--input-width);
+  border: none;
+  background-color: var(--color-green-light);
+  border-radius: var(--radius);
+  color: var(--color-white);
+  transition: var(--transition);
+  transition-property: background-color transform;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background-color: var(--color-green-dark);
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.99);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: no-drop;
+  }
+}
