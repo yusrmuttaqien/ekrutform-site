@@ -1,0 +1,50 @@
+@use '@/styles';
+
+.root {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    @extend .p;
+
+    margin-bottom: 0.3em;
+    transition: var(--transition);
+    transition-property: color;
+  }
+
+  input {
+    @extend .p;
+
+    height: var(--input-height);
+    width: var(--input-width);
+    padding: 0 0.7rem;
+    background-color: var(--color-cream);
+    border: 0.1rem solid transparent;
+    border-radius: var(--radius);
+    transition: var(--transition);
+    transition-property: border, color;
+
+    &:not(:placeholder-shown) {
+      border-bottom-color: var(--color-green-light);
+    }
+
+    &::placeholder {
+      color: var(--color-green-light);
+    }
+
+    &:focus {
+      border-color: var(--color-green-light);
+      outline: none;
+    }
+  }
+
+  &.error {
+    label {
+      color: var(--color-red);
+    }
+
+    input {
+      border-color: var(--color-red);
+    }
+  }
+}

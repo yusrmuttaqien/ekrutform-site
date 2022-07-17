@@ -1,0 +1,23 @@
+:root {
+  --radius: 0.2rem;
+  --transition: 0.16s ease-in-out;
+
+  --input-height: 2.3rem;
+  --input-width: 15rem;
+
+  --color-green-dark: hsl(187, 13%, 39%);
+  --color-green-light: hsl(178, 14%, 55%);
+  --color-red: hsl(0, 90%, 39%);
+  --color-cream: hsl(37, 28%, 85%);
+  --color-white: hsl(37, 30%, 92%);
+
+  --font-h1-display: clamp(3rem, 3vw + 0.675rem, 3.75rem);
+  --font-h1: clamp(2.125rem, 2vw + 0.763rem, 3rem);
+  --font-h2: clamp(1.5rem, 2vw + 0.013rem, 2.125rem);
+  --font-h3: clamp(1.25rem, 1vw + 0.475rem, 1.5rem);
+  --font-h4: clamp(1rem, 1vw + 0.225rem, 1.25rem);
+  --font-h5: clamp(0.875rem, 1vw + 0.038rem, 1rem);
+  --font-h6: clamp(0.75rem, 0vw + 0.813rem, 0.875rem);
+  --font-body: clamp(0.875rem, 1vw + 0.038rem, 1rem);
+  --font-caption: clamp(0.6875rem, 0vw + 0.719rem, 0.75rem);
+}
