@@ -17,19 +17,28 @@ export default function axiosFetch(url, method, param1, param2) {
       .then((res) => resolve(res.data))
       .catch((err) => {
         if (err.response) {
-          const { data, status } = err.response;
+          const { data, status, config } = err.response;
           console.log(err);
 
-          reject(
-            Error(
-              isString(data?.message)
-                ? data.message
-                : 'Server error is happened',
-              {
-                cause: isNumber(data?.status) ? data.status : 500,
-              }
-            )
-          );
+          if (config.url.includes('http://')) {
+            reject(
+              Error(
+                'Please switch site permission for "Insecure content" to "Allowed"',
+                { cause: 400 }
+              )
+            );
+          } else {
+            reject(
+              Error(
+                isString(data?.message)
+                  ? data.message
+                  : 'Server error is happened',
+                {
+                  cause: isNumber(data?.status) ? data.status : 500,
+                }
+              )
+            );
+          }
         } else {
           reject(Error('Client error is happened', { cause: 400 }));
         }
