@@ -3,6 +3,7 @@
 .root {
   display: flex;
   flex-direction: column;
+  width: var(--input-width);
 
   label {
     @extend .p;
@@ -16,7 +17,7 @@
     @extend .p;
 
     height: var(--input-height);
-    width: var(--input-width);
+    width: 100%;
     padding: 0 0.7rem;
     background-color: var(--color-cream);
     border: 0.1rem solid transparent;

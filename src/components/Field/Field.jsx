@@ -1,4 +1,5 @@
 import concat from '@/utils/string/concat';
+import get from 'lodash/get';
 import styles from './field.module.scss';
 
 /**
@@ -27,16 +28,16 @@ export default function Field(props) {
   const classes = concat([
     styles.root,
     className,
-    error?.[name] && styles.error,
+    get(error, name) && styles.error,
   ]);
 
   const registerer = register ? register(name) : {};
 
   const _defineLabelText = () => {
     if (!label) return;
-    if (!error?.[name]) return label;
+    if (!get(error, name)) return label;
 
-    return label + ' ' + error[name].message;
+    return label + ' ' + get(error, name).message;
   };
 
   return (

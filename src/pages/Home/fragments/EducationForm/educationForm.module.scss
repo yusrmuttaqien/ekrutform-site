@@ -1,0 +1,33 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: var(--padding);
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  > div {
+    > div {
+      display: flex;
+      margin-bottom: var(--padding);
+
+      > *:first-child {
+        margin-right: var(--padding);
+      }
+    }
+  }
+}
+
+.customButton {
+  width: 100%;
+  background-color: var(--color-red);
+}
+
+@media only screen and (max-width: 1130px) {
+  .customField {
+    width: 100%;
+  }
+}
