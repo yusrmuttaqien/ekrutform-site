@@ -19,7 +19,6 @@ export default function axiosFetch(url, method, param1, param2) {
         if (err.response) {
           const { data, status } = err.response;
           const { url } = err.config;
-          console.log(err);
 
           if (url.includes('http://')) {
             reject(
