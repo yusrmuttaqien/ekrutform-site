@@ -17,10 +17,11 @@ export default function axiosFetch(url, method, param1, param2) {
       .then((res) => resolve(res.data))
       .catch((err) => {
         if (err.response) {
-          const { data, status, config } = err.response;
+          const { data, status } = err.response;
+          const { url } = err.config;
           console.log(err);
 
-          if (config.url.includes('http://')) {
+          if (url.includes('http://')) {
             reject(
               Error(
                 'Please switch site permission for "Insecure content" to "Allowed"',
