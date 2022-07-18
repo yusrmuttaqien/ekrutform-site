@@ -22,7 +22,7 @@ export default function BasicForm(props) {
 
   useEffect(() => {
     // As long the value is the same, rerendering is not an issue.
-    const subscription = watch((value, { name, type }) => setFetchError(null));
+    const subscription = watch(() => setFetchError(null));
 
     return () => subscription.unsubscribe();
   }, [watch]);
@@ -61,7 +61,7 @@ export default function BasicForm(props) {
           className={styles.customButton}
           disabled={!isDirty || isSubmitting}
         >
-          Continue
+          {isSubmitting ? 'Submitting' : 'Continue'}
         </Button>
       </form>
     </div>

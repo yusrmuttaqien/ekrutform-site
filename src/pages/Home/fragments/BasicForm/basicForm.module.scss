@@ -2,9 +2,9 @@
   header {
     margin-bottom: 1.5rem;
 
-    p {
+    > p {
       color: var(--color-green-light);
-      margin-top: 0.3em;
+      margin-top: 0.3rem;
     }
   }
 
@@ -20,7 +20,7 @@
   }
 }
 
-.customField input,
+.customField,
 form .customButton {
   width: 100%;
 }

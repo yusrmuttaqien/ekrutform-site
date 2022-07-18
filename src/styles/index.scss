@@ -21,13 +21,13 @@ html,
 body,
 #root {
   width: 100%;
-  min-width: 320px;
+  min-width: 490px;
   font-family: 'Prompt', sans-serif;
   background: var(--color-white);
 }
 
 #root {
-  padding: 0 1.25rem;
+  padding: var(--padding);
 }
 
 .h1,
@@ -47,6 +47,7 @@ h1 {
 h2 {
   font-size: var(--font-h2);
   font-weight: 700;
+  line-height: 1.2em;
 }
 
 .h3,

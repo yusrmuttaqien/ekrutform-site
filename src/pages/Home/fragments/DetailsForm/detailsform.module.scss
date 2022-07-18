@@ -1,0 +1,103 @@
+@use '@/styles';
+@use '@/styles/utils';
+
+.root {
+  display: flex;
+  flex-direction: column;
+
+  header {
+    margin-bottom: 1.5rem;
+
+    > p {
+      color: var(--color-green-light);
+    }
+
+    > *:not(:last-child) {
+      margin-bottom: 0.3rem;
+    }
+
+    > div {
+      display: grid;
+      grid-template-columns: min-content auto;
+      background-color: var(--color-green-light);
+      border-radius: var(--radius);
+      padding: 1rem;
+
+      span {
+        p {
+          color: var(--color-cream);
+
+          &:not(:last-child) {
+            margin-bottom: 0.3rem;
+          }
+        }
+
+        &:first-child {
+          margin-right: 0.5rem;
+
+          p {
+            display: flex;
+            justify-content: space-between;
+            white-space: nowrap;
+
+            &::after {
+              @extend .p;
+
+              content: ':';
+              margin-left: 0.3rem;
+            }
+          }
+        }
+
+        &:last-child {
+          min-width: 0;
+
+          p {
+            @include utils.elipsis;
+          }
+        }
+      }
+    }
+  }
+
+  form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    > p {
+      color: var(--color-red);
+      text-align: center;
+    }
+
+    > div {
+      display: flex;
+
+      > div {
+        flex: 1;
+      }
+    }
+  }
+}
+
+.customButton {
+  width: calc(100% - (var(--padding) * 2));
+  margin: 0 var(--padding);
+  background-color: var(--color-green);
+}
+
+.customButtonSubmit {
+  width: 100%;
+  grid-column: 1 / span 3;
+}
+
+@media only screen and (max-width: 1130px) {
+  .root form > div {
+    flex-direction: column;
+
+    > div:first-child {
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 :root {
   --radius: 0.2rem;
   --transition: 0.16s ease-in-out;
+  --padding: 1.25rem;
 
   --input-height: 2.3rem;
   --input-width: 15rem;
@@ -8,6 +9,7 @@
   --color-green-dark: hsl(187, 13%, 39%);
   --color-green-light: hsl(178, 14%, 55%);
   --color-red: hsl(0, 90%, 39%);
+  --color-green: hsl(115, 90%, 39%);
   --color-cream: hsl(37, 28%, 85%);
   --color-white: hsl(37, 30%, 92%);
 
