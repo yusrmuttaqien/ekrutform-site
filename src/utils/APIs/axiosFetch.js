@@ -18,14 +18,15 @@ export default function axiosFetch(url, method, param1, param2) {
       .catch((err) => {
         if (err.response) {
           const { data, status } = err.response;
+          console.log(err);
 
           reject(
             Error(
-              isString(data.message)
+              isString(data?.message)
                 ? data.message
                 : 'Server error is happened',
               {
-                cause: isNumber(data.status) ? data.status : 500,
+                cause: isNumber(data?.status) ? data.status : 500,
               }
             )
           );
