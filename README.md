@@ -82,4 +82,4 @@ There are a few notes about live demo app and payload based on PDF example
 
 ## Credits
 
-### <a href="https://github.com/yusrmuttaqien">Yusril Muttaqien</a> - 2022 - MIT License
+### <a href="https://github.com/yusrmuttaqien">Yusril Muttaqien</a> - 2022
